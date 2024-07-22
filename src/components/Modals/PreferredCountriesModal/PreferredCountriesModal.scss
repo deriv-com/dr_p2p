@@ -1,0 +1,25 @@
+.preferred-countries-modal {
+    &__dialog {
+        width: 44rem;
+        border-radius: 4px;
+        height: 56rem;
+    }
+
+    &__full-page-modal {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #fff;
+        z-index: 1;
+        height: calc(100vh - 7.5rem);
+
+        & .mobile-wrapper {
+            &__header {
+                padding: 1.4rem 1.6rem;
+            }
+            &__footer {
+                border-top: 0;
+            }
+        }
+    }
+}

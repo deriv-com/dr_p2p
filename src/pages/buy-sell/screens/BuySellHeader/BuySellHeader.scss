@@ -1,0 +1,109 @@
+.buy-sell-header {
+    padding: 2.5rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mobile-or-tablet-screen {
+        padding: 0;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .deriv-input {
+        padding: 6px 8px;
+        height: 4rem;
+        align-items: center;
+
+        @include mobile-or-tablet-screen {
+            display: flex;
+            align-items: center;
+            line-height: 1rem;
+        }
+
+        &__helper-message {
+            display: none;
+        }
+    }
+
+    &__tabs {
+        & .derivs-primary-tabs {
+            height: 4rem;
+            width: 18rem;
+            border-radius: 0.6rem;
+            padding: 0.5rem;
+        }
+
+        & .derivs-primary-tabs__btn--active {
+            border-radius: 0.4rem;
+            padding: 0.8rem 0.6rem;
+        }
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+
+        @include mobile-or-tablet-screen {
+            width: 100%;
+            padding: 1.6rem;
+
+            &:last-child {
+                border-top: 1px solid #f2f3f4;
+                border-bottom: 1px solid #f2f3f4;
+            }
+        }
+
+        &-search {
+            width: 100%;
+            .search {
+                .deriv-input {
+                    &__container {
+                        width: 24rem;
+
+                        @include mobile-or-tablet-screen {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        & > .deriv-button__variant--outlined.deriv-button__color--black {
+            border-color: #d6dadb;
+
+            &:hover:not(:disabled) {
+                background-color: #fff;
+            }
+        }
+    }
+
+    &__filter-button {
+        height: 4rem;
+        width: 4rem;
+        border-width: 1px;
+
+        & > span,
+        & > svg {
+            position: absolute;
+        }
+
+        &:hover {
+            background-color: #fff;
+        }
+
+        &__indication {
+            position: absolute;
+            border-radius: 50px;
+            background: #ec3f3f;
+            width: 7px;
+            height: 7px;
+            bottom: 1rem;
+            left: 1rem;
+        }
+    }
+}

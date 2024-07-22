@@ -1,0 +1,47 @@
+.app-content {
+    &__body {
+        position: relative;
+        overflow: hidden;
+        height: calc(100vh - 10rem);
+        margin: auto;
+
+        @include desktop {
+            max-width: 952px;
+            min-width: 672px;
+            margin: 2rem auto 0;
+            margin-bottom: 0;
+        }
+
+        @include mobile-or-tablet-screen {
+            max-width: 60rem;
+            height: 100vh;
+        }
+    }
+
+    &__tabs {
+        @include desktop {
+            width: fit-content;
+        }
+
+        @include mobile-or-tablet-screen {
+            width: 100%;
+        }
+
+        & button {
+            height: 40px;
+
+            @include desktop {
+                padding: 0 3rem;
+                white-space: nowrap;
+            }
+
+            & > span {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    &__title {
+        border-bottom: 1px solid #f2f3f4;
+    }
+}

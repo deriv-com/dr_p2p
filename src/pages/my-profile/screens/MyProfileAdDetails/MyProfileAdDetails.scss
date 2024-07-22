@@ -1,0 +1,49 @@
+.my-profile-ad-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2.4rem;
+
+    @include mobile-or-tablet-screen {
+        padding: 2rem;
+    }
+
+    &__border {
+        border-top: 2px solid #f2f3f4;
+        width: 100%;
+    }
+
+    &__mobile-wrapper {
+        position: absolute;
+        top: 0;
+        height: calc(100vh - 7.5rem);
+    }
+
+    & .deriv-textarea {
+        &__footer {
+            justify-content: space-between;
+
+            & .deriv-text {
+                font-size: 1.2rem;
+                margin-top: -0.5rem;
+                margin-left: 1rem;
+
+                @include mobile-or-tablet-screen {
+                    margin-top: -0.2rem;
+                    line-height: 1.4rem;
+                }
+
+                &:only-child {
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+
+    &__button {
+        &--submitting {
+            //TODO: add this variant to deriv-com/ui
+            background-color: #4bb4b3 !important;
+        }
+    }
+}
